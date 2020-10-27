@@ -6,18 +6,31 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "babel-eslint": "10.1.x",
     "big.js": "^6.0.1",
+    "eslint-config-airbnb": "18.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "eslint-plugin-jsx-a11y": "6.2.x",
+    "eslint-plugin-react": "7.20.x",
+    "eslint-plugin-react-hooks": "2.5.x",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "3.17.x",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint .",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\"",
+    "fix": "stylelint --fix \"**/*.{css,scss}\" && eslint . --fix",
+    "linters": "npm run fix && npm run stylelint && npm run eslint && echo '🎉 All test pass 🎉'"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "6.8.x",
+    "stylelint": "13.3.x"
   }
 }
